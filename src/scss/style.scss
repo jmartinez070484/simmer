@@ -1,0 +1,111 @@
+@import "settings";
+
+body {
+	font-size: 62.5%;
+	min-width: 32em;
+	background: $white;
+	color: $black;
+	font-family: $arial;
+}
+.wrap {
+	position: relative;
+	min-width: 32em;
+	min-height: 100%;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+	line-height: 1.4;
+	margin-top: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: inherit;
+}
+p {
+	font-size: 1.4em;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+a, a:hover, a:visited {
+	color: inherit;
+}
+b span {
+	font-weight: inherit;
+}
+ul, ol {
+	font-size: inherit;
+	list-style: none;
+	margin: 0;
+	li ul, li ol {
+		margin: 0;
+	}
+}
+img {
+	outline: none;
+}
+
+.bold {
+	font-weight: bold;
+}
+.center {
+	text-align: center;
+}
+.relative {
+	position: relative;
+}
+
+.justify {
+	text-align: justify;
+	font-size: 0px;
+	text-justify: distribute-all-lines;
+	&:after {
+		content: "";
+		width: 100%;
+		display: inline-block;
+	}
+	> * {
+		display: inline-block;
+		vertical-align: middle;
+		text-align: left;
+		font-size: $resetfont;
+	}
+}
+.table {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+	height: 100%;
+	.cell {
+		display: table-cell;
+		vertical-align: middle;
+		height: 100%;
+	}
+}
+
+.row {
+	max-width: 78.75rem;
+}
+.columns {
+	min-height: 1px;
+}
+
+.responsive {
+	.tablet, .mobile {
+		display: none;
+	}
+}
+@media only screen and (max-width: 1024px) {
+	.responsive .tablet {
+		display: block;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.responsive .mobile {
+		display: block;
+	}
+}
+
+@import "global/header";
+@import "global/footer";
+
+@import "pages/index";

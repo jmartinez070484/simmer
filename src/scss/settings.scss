@@ -1,0 +1,30 @@
+// Colors
+$black: #000;
+$white: #fff;
+
+// Fonts
+$resetfont: 10px;
+$arial: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+
+// Mixins
+@mixin transition($arg...) {
+	-webkit-transition: $arg;
+	-moz-transition: $arg;
+	-ms-transition: $arg;
+	-o-transition: $arg;
+	transition: $arg;
+}
+@mixin transition-timing($arg...) {
+	-webkit-transition-timing-function: $arg;
+	-moz-transition-timing-function: $arg;
+	-ms-transition-timing-function: $arg;
+	-o-transition-timing-function: $arg;
+	transition-timing-function: $arg;
+}
+@mixin transform($arg...) {
+	-webkit-transform: $arg;
+	-moz-transform: $arg;
+	-ms-transform: $arg;
+	-o-transform: $arg;
+	transform: $arg;
+}
